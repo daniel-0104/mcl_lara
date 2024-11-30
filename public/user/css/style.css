@@ -1,0 +1,1413 @@
+html,body{
+    color: black;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+:root{
+    --light-gray: #f1f1f181;
+    --purple: #7b94f8;
+    --drak-green: rgb(43, 57, 59);
+    --light-blue: #2788ab;
+}
+
+/*.......................................... nav bar start ................................... */
+#logo-img{
+    display: block;
+    width: 170px;
+    height: 60px;
+    object-fit: cover;
+}
+.navbar{
+    background-color: white;
+}
+.navbarNav{
+    justify-content: right;
+}
+#login-btn,
+#dashboard{
+    color: white !important;
+    background-color: var(--purple);
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 10pt;
+}
+.noti-bg{
+    background-color: var(--light-blue);
+    color: white;
+}
+.noti-btn{
+    border: 1px solid var(--light-blue);
+}
+.noti-btn:hover{
+    color: var(--light-blue);
+    border: 1px solid var(--light-blue);
+}
+.nav-link.active,
+.nav-link.active i{
+    color: var(--light-blue) !important;
+    background-color: transparent;
+}
+#nav-order{
+    width: 100%;
+    justify-content: right;
+}
+#nav-order > li > a{
+    color: black;
+    padding: 8px 30px;
+    margin: 0 10px;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#nav-order > li > a:hover,
+.navbar-nav a i:hover{
+    color: var(--light-blue) !important;
+}
+.navbar-toggler{
+    border: none;
+    color: black !important;
+    box-shadow: none;
+    outline: 0;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+.dropdown{
+    margin-top: -5px;
+}
+.dropdown-menu{
+    background-color: white;
+    color: black;
+    top: 34px !important;
+}
+.dropdown #login-btn{
+    color: white !important;
+    background-color: var(--purple);
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-size: 10pt;
+}
+.dropdown-item{
+    padding-left: 15px;
+    color: black;
+}
+.dropdown-menu a:hover{
+    color: var(--light-blue)!important;
+    background-color: transparent !important;
+}
+.dropdown-menu form:hover{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* color: red; */
+}
+/* .dropdown-item button{
+    color: red;
+} */
+.dropdown-menu form:focus,
+.dropdown-menu form:active,
+.dropdown-item button:focus{
+    border: none;
+    background-color: transparent;
+    color: red;
+}
+#noti-btn-mb{
+    display: none;
+}
+#nav-icon #user-name{
+    cursor: pointer;
+}
+@media screen and (max-width: 767px){
+    .navbar-nav li{
+        padding: 8px 0;
+    }
+    #nav-icon{
+        padding-left: 20px;
+        margin: 10px 0;
+    }
+    .dropdown-menu{
+        top: 35px !important;
+    }
+    .dropdown-item,
+    .dropdown-item button{
+        font-size: 11pt !important;
+    }
+    #nav-icon #user-name{
+        display: none;
+    }
+    .noti-btn{
+        display: block;
+        margin-right: -5px !important;
+        font-size: 11pt
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px){
+    #nav-order > li > a{
+        margin: 0;
+        padding:0 20px;
+    }
+}
+@media screen and (max-width: 343px){
+    #noti-btn-mb{
+        display: block;
+    }
+    #noti-btn-lp{
+        display: none;
+    }
+}
+/*.......................................... nav bar end ................................... */
+
+
+/*.......................................... footer start ................................... */
+#footer{
+    width: 100%;
+    background-color: rgb(242, 241, 241);
+    color: black;
+    padding: 15px 25px 0;
+    bottom: 0 !important;
+    border-top: 1px solid rgba(29, 28, 28, 0.315);
+}
+@media screen and (max-width: 621px){
+    #footer > div{
+        display: block !important;
+        text-align: center;
+        font-size: 10pt;
+    }
+}
+/*.......................................... footer end ................................... */
+
+
+/*.......................................... home start ................................... */
+#home > div,
+#home img{
+    position: relative;
+}
+#home-content{
+    position: absolute;
+    top: 15%;
+    left: 6%;
+    width: 55%;
+}
+#home-content h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--drak-green);
+}
+#home-content p{
+    margin-top: 15px;
+    line-height: 30px;
+    word-spacing: 1px;
+}
+#contact{
+    margin-top: 30px;
+    background-color: var(--purple);
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    font-size: 11pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+@media screen and (max-width: 992px){
+    #home-content{
+        position: absolute;
+        top: 10%;
+        width: 70%;
+    }
+    #home-content h1{
+        font-size: 19pt;
+    }
+    #home-content p{
+        margin-top: 13px;
+        line-height: 25px;
+        word-spacing: 1px;
+    }
+    #contact{
+        margin-top: 18px;
+        font-size: 10pt;
+    }
+    #logo-img{
+        width: 120px;
+        height: 40px;
+        margin-left: -10px;
+    }
+}
+@media screen and (max-width: 753px){
+    #home-content{
+        position: absolute;
+        width: 80%;
+    }
+    #home-content h1{
+        font-size: 15pt;
+    }
+    #home-content p{
+        font-size: 10pt;
+        line-height: 23px;
+    }
+    #contact{
+        margin-top: 5px;
+        padding: 10px 20px;
+        font-size: 9pt;
+    }
+    #nav-order > li > a{
+        font-size: 11pt;
+    }
+    #login-btn{
+        font-size: 9pt;
+        padding: 8px 25px;
+    }
+}
+@media screen and (max-width: 650px){
+    #home-content{
+        position: absolute;
+        width: 90%;
+        top: 8%;
+    }
+    #home-content h1{
+        font-size: 11pt;
+        font-weight: bolder;
+    }
+    #home-content p{
+        font-size: 8pt;
+        line-height: 20px;
+        word-spacing: 0;
+    }
+    #contact{
+        margin-top: 0;
+        padding: 5px 15px;
+        font-size: 6pt;
+    }
+}
+@media screen and (max-width: 467px){
+    #home img{
+        object-fit: cover;
+        height: 35vh;
+    }
+    #home-content{
+        top: 11%;
+    }
+    #home-content h1{
+        font-size: 12pt;
+        font-weight: bolder;
+    }
+    #home-content p{
+        font-size: 8pt;
+        line-height: 17px;
+        word-spacing: 1px;
+    }
+    #contact{
+        margin-top: 0;
+        font-size: 8pt;
+        padding-top: 8px;
+    }
+}
+/*.......................................... home end ................................... */
+
+
+/*.......................................... price plan start ................................... */
+#price-plan{
+    margin-top: 40px;
+    text-align: center;
+}
+#price-plan > div > h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--drak-green);
+    font-size: 26pt;
+}
+.plan-content{
+    color: white;
+    background-image: linear-gradient(135deg, #1e3a5f, #294a73, #30507c, #3b6196);
+    /* background-image: linear-gradient(to right top, #324079, #2e3d6e, #2a3962, #283556, #26314b); */
+    padding: 15px 0 10px;
+    border-radius: 20px;
+}
+.plan-content span:first-child{
+    font-size: 17pt;
+}
+.plan-content .expire{
+    color: rgba(224, 223, 223, 0.74);
+}
+.plan-content h2{
+    font-weight: bold;
+    margin: 10px auto;
+}
+.plan-content ul{
+    text-align: left;
+    list-style: none;
+}
+#starter-plan .plan-content{
+    width: 420px;
+}
+
+#plan-expire{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 30px auto;
+    background-color: var(--purple);
+    padding: 6px 1px 6px 10px;
+    border-radius: 50px;
+}
+#plan-expire button{
+    padding: 8px 25px;
+    border-radius: 50px;
+    color: white;
+}
+#plan-expire button:focus{
+    border: 1px solid transparent;
+}
+#plan-expire button.text-active{
+    background-color: white;
+    padding: 8px 25px;
+    border-radius: 50px;
+    color: black;
+}
+#yearly-plan,
+#owner-plan{
+    display: none;
+}
+
+.package-plan .plan-content > div{
+    height: 145px;
+}
+#cash-back > p{
+    color:rgb(223, 185, 255);
+    padding: 1px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 13px;
+    box-shadow: 3px 0 2px rgba(255, 255, 255, 0.928);
+}
+#service-plan{
+    background-image: linear-gradient(135deg, #1e3a5f, #294a73, #30507c, #3b6196);
+    color: rgba(255, 255, 255, 0.942);
+    padding: 70px;
+    margin-top: 40px;
+    border-bottom: 1px solid rgba(252, 252, 252, 0.716);
+}
+#service-plan p{
+    font-size: 13pt;
+}
+#service-plan span{
+    font-size: 17pt;
+    font-weight: bold;
+    color:rgb(223, 185, 255);
+}
+
+@media screen and (max-width: 470px){
+    #plan-expire{
+        width: 90%;
+    }
+    #plan-expire button{
+        width: fit-content;
+        font-size: 11pt;
+        padding: 4px 20px !important;
+    }
+    #cash-back > p{
+        font-size: 11pt;
+        margin-bottom: -3px;
+    }
+}
+
+
+@media screen and (max-width: 991px){
+    #starter-plan{
+        margin-left: 10px;
+    }
+    .package-plan .plan-content > div{
+        height: auto;
+    }
+}
+@media screen and (max-width: 767px){
+    #price-plan .col-lg-4{
+        width: 350px;
+    }
+    #price-plan > div:first-child{
+        padding: 0 !important;
+    }
+    #price-plan > div > h2{
+        font-size: 16pt;
+    }
+    #price-plan > div > p{
+        font-size: 11pt;
+        margin: auto 20px;
+    }
+    .plan-content span:first-child{
+        font-size: 14pt;
+    }
+    .plan-content span:last-child,
+    .plan-content ul{
+        font-size: 10pt;
+    }
+    .plan-content h2{
+        font-size: 17pt;
+    }
+    #service-plan{
+        padding: 50px 0 !important;
+    }
+    #service-plan p{
+        font-size: 10pt !important;
+        margin-bottom: 13px !important;
+    }
+    #service-plan span{
+        font-size: 14pt;
+        padding: 0 4px;
+    }
+
+}
+@media screen and (max-width: 445px){
+    #starter-plan{
+        width: 100%;
+        margin-left: 0 !important;
+    }
+    #starter-plan .plan-content{
+        width: 350px;
+        margin: auto;
+    }
+    #starter-plan ul .pe-5{
+        padding-right: 18px !important;
+    }
+}
+/*.......................................... price plan end ................................... */
+
+
+/*.......................................... service title start ................................... */
+#service-title,
+#contact-us{
+    margin: 60px auto;
+    width: 70%;
+    text-align: left;
+}
+#service-title > h1,
+#contact-us > h1,
+.stand-for > h3,
+.mission > h3{
+    text-transform: uppercase;
+    color: var(--drak-green);
+    font-weight: bold;
+}
+.personal > h3{
+    text-transform: uppercase;
+    color: var(--drak-green);
+    font-weight: bold;
+    margin-bottom: -50px;
+}
+#service-title > p,
+#contact-us > p,
+.stand-for > p{
+    margin-top: 15px;
+    word-spacing: 1px;
+    font-size: 13pt;
+}
+#service-title > div > label{
+    margin-top: 60px;
+    font-weight: 400;
+}
+#service-title img{
+    object-fit: cover;
+    height: 80px !important;
+    margin-bottom: 15px;
+}
+@media screen and (max-width: 767px){
+    #service-title,
+    #contact-us,
+    .stand-for,
+    .mission{
+        margin: 60px auto;
+        width: 85%;
+        text-align: left;
+    }
+    #service-title > h1,
+    #contact-us > h1{
+        margin-top: -10px;
+        font-size: 18pt;
+    }
+    #service-title > p,
+    #contact-us > p,
+    .stand-for > p{
+        margin-top: 15px;
+        word-spacing: 1px;
+        font-size: 10pt;
+    }
+    #service-title > div > label{
+        margin-top: 40px;
+        font-size: 10pt;
+    }
+    .stand-for > h3,
+    .mission > h3{
+        margin-top: -10px;
+        font-size: 15pt;
+    }
+    .mission .row h5{
+        font-size: 13pt;
+    }
+    .mission .row p{
+        margin-top: 0 !important;
+        font-size: 10pt;
+    }
+}
+/*.......................................... service title end ................................... */
+
+
+/*.......................................... about us start ................................... */
+.stand-for,
+.mission,
+.teams{
+    margin: 60px auto 90px;
+}
+.mission .row h5{
+    color: var(--light-blue);
+}
+.teams > div > h3{
+    display: block;
+    margin: auto;
+    color: var(--drak-green);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 26pt;
+}
+.teams .row img{
+    width: 230px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+.teams .col-lg-3 h5{
+    color: var(--drak-green);
+}
+.teams .row label{
+    color: rgb(94, 92, 92);
+    font-size: 11pt;
+}
+@media screen and (max-width: 767px){
+    .teams .col-lg-3{
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+    }
+    .teams .row img{
+        margin: 0 auto 10px;
+    }
+    .teams .col-lg-3 h5{
+        font-size: 14pt;
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 575px){
+    .teams .row label{
+        font-size: 10pt;
+    }
+}
+/*.......................................... about us end ................................... */
+
+
+/*.......................................... contact us start ................................... */
+#contact-content{
+    margin: 80px auto !important;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.209) 0px 2px 8px;
+    border-radius: 10px;
+    padding: 30px 20px;
+}
+.form-group label{
+    color: rgb(94, 92, 92);
+}
+.form-control:focus{
+    box-shadow: none;
+    border: 1px solid var(--purple);
+}
+.form-group ::placeholder{
+    color: rgba(128, 128, 128, 0.682);
+}
+textarea{
+    resize: none;
+}
+#submit{
+    background-color: var(--purple);
+    color: white;
+    padding: 10px 20px;
+}
+/*
+#social-link{
+    display: flex;
+    align-items: center;
+}
+#social-link a{
+    color: black;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+#social-link a:hover{
+    color: var(--light-blue);
+    border: 1px solid var(--light-blue);
+} */
+@media screen and (max-width: 1200px){
+    #contact-content .col-lg-3{
+        padding-left: 18px !important;
+    }
+    #contact-content .col-lg-3 > div{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 767px){
+    #contact-content > .col-lg-3{
+        border-left: none !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.154);
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+        font-size: 11pt;
+    }
+    #contact-content .col-lg-3 > h5,
+    #contact-content .col-lg-9 > h5{
+        font-size: 14pt !important;
+    }
+    #contact-content .col-lg-3 > div{
+        text-align: left;
+    }
+    .form-group label{
+        font-size: 11pt;
+    }
+    .form-group ::placeholder{
+        font-size: 10pt;
+    }
+    #contact-content{
+        padding: 30px 10px;
+    }
+    #submit{
+        width: 100%;
+        font-size: 11pt;
+        padding: 8px 20px;
+    }
+}
+/*.......................................... contact us end ................................... */
+
+
+/* start from here */
+
+/*.......................................... partner company start ................................... */
+#partner-company,
+#web-case,
+#review{
+    margin: 90px auto 100px;
+}
+#partner-company > div > h3,
+#web-case > div > h3{
+    display: block;
+    margin: auto;
+    color: var(--drak-green);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 26pt;
+}
+#partner-company > div > p,
+#web-case > div > p{
+    margin-top: 10px;
+    color: var(--light-blue);
+    font-size: 14pt;
+}
+@media screen and (max-width: 575px){
+    #partner-company .row{
+        display: grid;
+        row-gap: 0;
+        grid-template-columns: repeat(2,1fr);
+    }
+    #partner-company > div > h3,
+    #web-case > div > h3,
+    .teams > div > h3{
+        font-size: 15pt;
+    }
+    #partner-company > div > p,
+    #web-case > div > p{
+        margin-top: 8px;
+        font-size: 11pt;
+    }
+    #partner-company,
+    #web-case,
+    #review{
+        margin: 90px auto 40px;
+    }
+}
+/*.......................................... partner company end ................................... */
+
+
+/*.......................................... web cases start ................................... */
+#case-content > a{
+    margin-left: 80px;
+    text-align: right;
+}
+#case-content .swiper .col-lg-4{
+    padding-left: 22px;
+    padding-top: 20px;
+}
+#case-content .swiper .col-lg-4 label{
+    margin-top: 6px;
+    background-color: var(--light-blue);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 5px;
+    font-size: 10pt;
+}
+#case-content .swiper .col-lg-4 p{
+    font-size: 14px;
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.777);
+}
+#case-content .swiper a{
+    text-decoration: none;
+    color: var(--drak-green);
+}
+#case-content .swiper a:hover{
+    color: var(--light-blue);
+}
+#case-content .swiper a h4{
+    font-weight: bold;
+}
+#case-content .swiper{
+    width: 100%;
+    object-fit: cover;
+}
+#case-content .swiper-slide{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#case-content .swiper-slide .row{
+    background-color: var(--light-gray);
+    width: 90%;
+    height: 100%;
+}
+#case-content .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#case-content .swiper-pagination{
+    display: none;
+}
+#case-content .swiper-button-next,
+#case-content .swiper-button-prev{
+    background-color: var(--light-blue);
+    color: white;
+    width: 30px;
+    height: 30px;
+}
+#case-content .swiper-button-next::after,
+#case-content .swiper-button-prev::after{
+    font-size: 15pt;
+}
+@media screen and (max-width: 991px){
+    #case-content > a{
+        margin-left: 50px;
+    }
+    #case-content .swiper-slide .row{
+        width: 90%;
+        height: auto;
+    }
+    #case-content .swiper .col-lg-4{
+        padding-left: 20px;
+        padding-bottom: 40px;
+    }
+    #project-cases{
+        margin: auto 20px;
+    }
+    #project-cases .row{
+        margin-bottom: 60px !important;
+        border: 1px solid rgba(0, 0, 0, 0.384);
+        padding-bottom: 40px;
+    }
+}
+@media screen and (max-width: 575px){
+    #web-case{
+        padding: 0 !important;
+    }
+    #case-content .swiper-slide .row{
+        margin-bottom: 40px;
+    }
+    #case-content .swiper-pagination{
+        display: block;
+    }
+    #case-content .swiper-button-next,
+    #case-content .swiper-button-prev{
+        display: none;
+    }
+    #case-content > a{
+        margin-left: 20px;
+        font-size: 10pt;
+        margin-bottom: -5px;
+    }
+    #case-content .swiper a h4{
+        font-size: 12pt;
+    }
+    #case-content .swiper .col-lg-4{
+        padding-left: 15px;
+    }
+    #case-content .swiper .col-lg-4 p{
+        font-size: 11px;
+        margin-top: 10px;
+    }
+    #case-content .swiper .col-lg-4 label{
+        margin-top: 0;
+        font-size: 7pt;
+    }
+}
+/*.......................................... web cases end ................................... */
+
+
+/*..........................................review start ................................... */
+#review > h3{
+    display: flex;
+    align-items: center;
+    color: var(--drak-green);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 26pt;
+}
+#review > h3::after{
+    content: '';
+    width: 60%;
+    display: block;
+    background-color: var(--light-blue);
+    height: 2px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+#review .swiper-slide{
+    background-color: var(--light-gray);
+    padding: 20px;
+    height: 350px;
+    border-radius: 8px;
+    color: rgb(83, 82, 82);
+    border: 1px solid rgba(0, 0, 0, 0.384);
+
+}
+#review .swiper-slide span{
+    font-size: 10pt;
+}
+#review .swiper-slide p{
+    margin-top: 20px;
+    font-size: 11pt;
+}
+#review .swiper-wrapper{
+    padding-bottom: 40px;
+}
+#review .swiper-pagination-bullet-active,
+#case-content .swiper-pagination-bullet-active{
+    background-color: var(--light-blue);
+    opacity: 1;
+}
+@media screen and (max-width: 575px){
+    #review > h3{
+        font-size: 15pt;
+    }
+    #review h5{
+        font-size: 13pt;
+    }
+    #review .swiper-slide p{
+        font-size: 10pt;
+        margin-top: 15px;
+    }
+    #review > h3::after{
+        width: 60%;
+        margin-left: 10px;
+    }
+}
+/*..........................................review end ................................... */
+
+/*.......................................... cases start ................................... */
+#web-cases{
+    margin: 60px auto;
+}
+#cases-title > h1{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--drak-green);
+    font-weight: bold;
+    width: 60%;
+}
+/* #cases-title > h1::after{
+    content: '';
+    width: 60%;
+    display: block;
+    background-color: var(--light-blue);
+    height: 5px;
+    border-radius: 50%;
+    margin-left: 20px;
+} */
+#case-category{
+    margin-top: 50px;
+}
+#case-category a{
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+#case-category button{
+    background-color: rgba(233, 233, 233, 0.856);
+    border-radius: 30px;
+    margin-right: 10px;
+    color: rgba(0, 0, 0, 0.747);
+    padding: 8px 25px;
+}
+#case-category .category-link button.active,
+#case-category button:hover{
+    background-color: var(--light-blue);
+    color: white !important;
+}
+#project-cases{
+    margin-top: 30px;
+}
+#project-cases .col-lg-4{
+    padding-left: 22px;
+    padding-top: 30px;
+}
+#project-cases h4{
+    font-weight: bold;
+}
+#project-cases h4:hover{
+    color: var(--light-blue);
+}
+#project-cases label{
+    margin-top: 6px;
+    background-color: var(--light-blue);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 5px;
+    font-size: 10pt;
+}
+#project-cases .col-lg-4 p{
+    font-size: 15px;
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.777);
+}
+#project-cases .row{
+    background-color: var(--light-gray);
+    height: 100%;
+    margin-bottom: 50px;
+    box-shadow: 2px 0 10px rgba(192, 192, 192, 0.784);
+}
+.case-scroll-container{
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+.case-scroll-container::-webkit-scrollbar{
+    height: 6px;
+}
+.case-scroll-container::-webkit-scrollbar-track{
+    background-color: rgba(233, 233, 233, 0.856);
+}
+.case-scroll-container::-webkit-scrollbar-thumb{
+    background-color: var(--light-blue);
+}
+
+#new-project{
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: var(--light-blue);
+    color: white;
+    padding: 80px 10px;
+    border-bottom: 1px solid rgba(29, 28, 28, 0.315);
+}
+#new-project > h5{
+    font-weight: bold;
+    font-size: 25pt;
+}
+@media screen and (max-width: 767px){
+    #cases-title > h1{
+        display: block;
+        margin: -10px auto -10px;
+        font-size: 18pt;
+        width: 100%;
+    }
+    #new-project > h5{
+        font-weight: bold;
+        font-size: 17pt;
+    }
+    #cases-title > h1::after{
+        width: 100%;
+        margin-top: 10px;
+        height: 5px;
+        margin-left: 0;
+    }
+    .case-scroll-container{
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        padding-bottom: 0;
+    }
+    .case-scroll-container::-webkit-scrollbar{
+        display: none;
+    }
+    #case-category button{
+        padding: 7px 20px;
+        font-size: 12pt;
+    }
+    #case-category{
+        margin-bottom: -20px;
+    }
+}
+@media screen and (max-width : 575px){
+    #project-cases .col-lg-4{
+        padding-left: 15px;
+        padding-top: 20px;
+    }
+    #project-cases h4{
+        font-size: 15pt;
+    }
+    #project-cases .col-lg-4 p{
+        font-size: 13px;
+    }
+    #project-cases label{
+        margin-top: 6px;
+        background-color: var(--light-blue);
+        color: white;
+        padding: 4px 15px;
+        border-radius: 5px;
+        font-size: 9pt;
+    }
+}
+/*.......................................... cases end ................................... */
+
+
+/*.......................................... case details start ................................... */
+#case-detail{
+    display: block;
+    margin: 60px auto -40px;
+}
+#project-detail-title{
+    margin: 0 auto 60px;
+    text-align: center;
+}
+#project-detail-title > h1{
+    color: var(--drak-green);
+    font-size: 32pt;
+    font-weight: bold;
+}
+#project-detail-title > p{
+    display: block;
+    margin: 20px auto;
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(0, 0, 0, 0.705);
+    word-spacing: 1px;
+    line-height: 28px;
+    font-size: 13pt;
+    width: 70%;
+}
+#price-plans{
+    margin-top: 25px;
+    background-color: var(--purple);
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    font-size: 11pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#about-project{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+}
+#about-project > div{
+    border-top: 1px solid rgba(0, 0, 0, 0.384);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.384);
+    border-left: 1px solid rgba(0, 0, 0, 0.384);
+    padding: 15px 20px 10px;
+    width: 100%;
+}
+#about-project > div:last-child{
+    border-right: 1px solid rgba(0, 0, 0, 0.384);
+}
+#about-project > div span{
+    display: block;
+    text-transform: uppercase;
+    color: var(--drak-green);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#about-project > div p{
+    color: rgba(0, 0, 0, 0.705);
+}
+
+#screens{
+    margin: 80px auto 90px;
+}
+#screens h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--drak-green);
+    margin-bottom: 30px;
+    font-size: 26pt;
+}
+#screens h2::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--light-blue);
+    margin-top: 10px;
+}
+#screens img{
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 767px){
+    #screens{
+        margin: 80px auto -90px;
+    }
+    #case-detail{
+        display: block;
+        margin: 50px auto 60px;
+    }
+    #project-detail-title > h1{
+        font-size: 21pt;
+    }
+    #screens h2{
+        font-size: 18pt;
+    }
+    #screens h2::after{
+        height: 3px;
+    }
+    #project-detail-title > p{
+        word-spacing: 1px;
+        line-height: 26px;
+        font-size: 11pt;
+        width: 100%;
+    }
+    #price-plans{
+        margin-top: 15px;
+        padding: 10px 25px;
+        font-size: 10pt;
+    }
+    #about-project{
+        display: block;
+    }
+    #about-project > div{
+        border-top: 1px solid rgba(0, 0, 0, 0.384);
+        border-bottom: 0;
+        border-left: 1px solid rgba(0, 0, 0, 0.384);
+        border-right: 1px solid rgba(0, 0, 0, 0.384);
+    }
+    #about-project > div:last-child{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.384);
+    }
+    #screens img{
+        margin-bottom: 40px;
+    }
+}
+/*.......................................... case details end ................................... */
+
+
+/*.......................................... profile start ................................... */
+.personal:nth-child(2) #contact-content{
+    margin: 80px auto !important;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.209) 0px 2px 8px;
+    border-radius: 10px;
+    padding: 15px 20px 50px;
+}
+#pass-page #contact-content{
+    width: 50%;
+    margin: 80px 0 !important;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.209) 0px 2px 8px;
+    border-radius: 10px;
+    padding: 30px 20px;
+}
+.personal{
+    margin: 60px auto 120px;
+}
+#package-detail label{
+    color: rgb(94, 92, 92);
+    font-size: 11pt;
+}
+#package-detail h6{
+    color: var(--drak-green);
+    font-size: 13pt;
+}
+@media screen and (max-width: 991px){
+    #package-detail .col-lg-3,
+    #package-detail .col-lg-6,
+    #package-detail .col-lg-4{
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 767px){
+    #pass-page #contact-content{
+        width: 100%;
+    }
+    .personal > h3{
+        margin-top: -10px;
+        font-size: 15pt;
+        margin-left: 14px;
+    }
+    .personal img{
+        display: block;
+        width: 150px !important;
+        margin: auto;
+    }
+    .personal:nth-child(2) #contact-content{
+        padding: 15px 10px 20px;
+    }
+    #package-detail label{
+        color: rgb(94, 92, 92);
+        font-size: 10pt;
+    }
+    #cart-title > h3{
+        font-size: 13pt;
+    }
+    #package-detail h5{
+        font-size: 13pt;
+    }
+}
+/*.......................................... profile end ................................... */
+
+
+
+@media screen and (max-width: 991px){
+    #alert-row{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        margin-right: 0 !important;
+    }
+    #alert-row > div{
+        width: 300px;
+        font-size: 11pt;
+    }
+}
+
+
+#order-btn{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    border: 2px solid var(--purple);
+    color: white;
+    font-weight: bold;
+    padding: 8px 50px;
+    font-size: 11pt;
+    margin-bottom: 20px;
+}
+#order-btn:hover,
+#order-btn-start:hover{
+    background-color: var(--purple);
+    border: 2px solid transparent;
+}
+#order-btn-start{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    border: 2px solid var(--purple);
+    color: white;
+    font-weight: bold;
+    padding: 8px 50px;
+    font-size: 11pt;
+    margin-top: 30px;
+    margin-bottom: 8px;
+}
+@media screen and (max-width: 500px){
+    #order-btn{
+        font-size: 10pt;
+    }
+}
+
+
+/*.......................................... cart start ................................... */
+#cart-page > div{
+    margin: 60px auto 100px;
+}
+#cart-title > h3{
+    text-transform: uppercase;
+    color: var(--drak-green);
+    font-weight: bold;
+}
+#cart-title label{
+    font-size: 14pt;
+    background-color: white;
+    border: 1px solid var(--light-blue);
+    padding: 2px 20px;
+    border-radius: 5px;
+    font-weight: medium;
+}
+#cart-page #contact-content{
+    margin-top: 0 !important;
+}
+.delete-btn,
+.delete-btn:hover{
+    margin-bottom: -8px;
+    background-color: white;
+    box-shadow: rgba(191, 191, 191, 0.397) 2px 0 4px;
+}
+#package-detail h5,
+#summary > h5{
+    color: var(--drak-green);
+}
+.cart-content{
+    margin-bottom: -20px;
+}
+#summary{
+    padding: 20px 30px;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+}
+@media screen and (max-width: 767px){
+    #cart-page > div{
+        margin-top: 50px;
+    }
+    #cart-title label{
+        font-size: 12pt;
+        margin-top: -5px;
+        padding: 2px 10px;
+    }
+    .delete-btn{
+        font-size: 11pt;
+    }
+    #summary > h5{
+        font-size: 14pt;
+    }
+    #summary{
+        padding: 20px;
+    }
+}
+/*.......................................... cart end ................................... */
+
+.cash-business{
+    font-size: 10pt;
+    color: var(--light-blue);
+}
+#buy-package{
+    background-color: var(--light-blue);
+}
+#order-pending,
+#order-empty{
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 90px;
+    color: var(--drak-green);
+    background-color: var(--light-gray);
+    padding: 30px;
+}
+#order-pending h6,
+#order-empty h6{
+    font-size: 13pt;
+}
+@media screen and (max-width: 400px){
+    #order-pending,
+    #order-empty{
+        padding: 30px 20px !important;
+    }
+}
