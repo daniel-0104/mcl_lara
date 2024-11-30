@@ -30,7 +30,7 @@ class userController extends Controller
         $categories = plan::get();
         $clientLogos = clientLogo::get();
         $clientTestis = clientTesti::get();
-        $projects = project::get();
+        $projects = project::take(6)->get();
         $carts = [];
         if (Auth::check()) {
             $carts = cart::where('user_name', Auth::user()->name)->get();
